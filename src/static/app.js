@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesList = document.getElementById("activities-list");
   const activitySelect = document.getElementById("activity");
   const signupForm = document.getElementById("signup-form");
+  if (!signupForm) {
+    console.error("Error: Element with ID 'signup-form' not found.");
+    return;
+  }
   const messageDiv = document.getElementById("message");
 
   // Function to fetch activities from API
